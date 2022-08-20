@@ -1,0 +1,5 @@
+# RVV Decoder Tests
+
+```
+make
+```
