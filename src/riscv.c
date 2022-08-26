@@ -4177,10 +4177,12 @@ static void decode_inst_operands(rv_decode *dec)
         dec->rd = operand_rd(inst);
         dec->rs1 = operand_rs1(inst);
         dec->vzimm = operand_vzimm11(inst);
+        break;
     case rv_codec_vsetivli:
         dec->rd = operand_rd(inst);
         dec->imm = operand_vimm(inst);
         dec->vzimm = operand_vzimm10(inst);
+        break;
     };
 }
 
