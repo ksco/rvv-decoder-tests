@@ -4492,7 +4492,7 @@ static void format_inst(char *buf, size_t buflen, size_t tab, rv_decode *dec)
             append(buf, rv_vreg_name_sym[dec->rs3], buflen);
             break;
         case 'v': {
-            char nbuf[4] = {0};
+            char nbuf[32] = {0};
             const int sew = 1 << (((dec->vzimm >> 3) & 0b111) + 3);
             sprintf(nbuf, "%d", sew);
             const int lmul = dec->vzimm & 0b11;
